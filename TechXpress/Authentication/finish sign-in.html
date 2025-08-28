@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finish Sign-In</title>
+  <link rel="stylesheet" href="finish sign-in.css">
+</head>
+<body>
+  <div class="background">
+    <canvas id="particles"></canvas>
+  </div>
+
+  <div class="finish-box">
+    <h2>Finish Sign-In</h2>
+    <form>
+      <!-- Date of Birth -->
+      <div class="input-box">
+        <input type="date" required>
+        <label>Date of Birth</label>
+      </div>
+
+      <!-- Gender (use radios so only one can be chosen) -->
+<fieldset class="gender-box">
+  <legend>Gender</legend>
+  <label><input type="radio" name="gender" value="male" required> Male</label>
+  <label><input type="radio" name="gender" value="female"> Female</label>
+</fieldset>
+
+      <!-- Terms -->
+      <div class="terms-box">
+        <label>
+          <input type="checkbox" required>
+          I agree to the Terms & Conditions
+        </label>
+      </div>
+
+      <!-- Submit -->
+     <button type="button" id="loginBtn" class="btn">Submit</button>
+    </form>
+
+      <!-- Loading Bar -->
+    <div class="loading-bar" id="loadingBar">
+      <div class="progress"></div>
+    </div>
+
+
+      <footer>
+        <p>&copy; 2025 TechXpress by SYED AHSAN. <br> All rights reserved.</p>
+    </footer>
+
+      <!-- Success Message (hidden at first) -->
+  <div class="success-msg" id="successMsg">
+    <div class="checkmark"></div>
+    <p>Profile Completed!</p>
+  </div>
+</div>
+
+  </div>
+
+  <script src="finish sign-in.js"></script>
+</body>
+</html>

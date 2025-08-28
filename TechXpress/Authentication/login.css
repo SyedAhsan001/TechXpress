@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.login-box {
+  position: relative;
+  background: rgba(30, 30, 30, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #00ffcc;
+  text-align: center;
+  z-index: 2;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.input-box {
+  position: relative;
+  margin: 20px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid #00ffcc;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-box label {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: #aaa;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -15px;
+  font-size: 12px;
+  color: #00ffcc;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #00ffcc;
+  color: #0d0d0d;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff0077;
+  box-shadow: 0 0 20px #ff0077;
+}
+
+/* Loading bar */
+.loading-bar {
+  display: none;
+  margin-top: 20px;
+  width: 100%;
+  height: 10px;
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.loading-bar .progress {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #00ffcc, #ff0077, #00ffcc);
+  background-size: 200% 100%;
+  animation: loadingGlow 2s linear infinite;
+}
+
+@keyframes loadingGlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-size: 14px;
+  margin-top: 40px;
+  margin-bottom: -40px;
+}
